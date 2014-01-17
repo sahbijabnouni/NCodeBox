@@ -1,0 +1,8 @@
+C:\Workspace\CodeLess.Domain\CodeLess.Domain\bin\Debug\CodeLess.Domain.dll
+C:\Workspace\CodeLess.Domain\CodeLess.Domain\bin\Debug\CodeLess.Domain.pdb
+C:\Workspace\CodeLess.Domain\CodeLess.Domain\obj\Debug\CodeLess.Domain.dll
+C:\Workspace\CodeLess.Domain\CodeLess.Domain\obj\Debug\CodeLess.Domain.pdb
+C:\Workspace\Libs\NCodeBox.Domain\bin\Debug\NCodeBox.Domain.dll
+C:\Workspace\Libs\NCodeBox.Domain\bin\Debug\NCodeBox.Domain.pdb
+C:\Workspace\Libs\NCodeBox.Domain\obj\Debug\NCodeBox.Domain.dll
+C:\Workspace\Libs\NCodeBox.Domain\obj\Debug\NCodeBox.Domain.pdb

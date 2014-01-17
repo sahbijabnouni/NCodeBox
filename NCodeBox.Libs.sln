@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NCodeBox.Domain", "NCodeBox.Domain\NCodeBox.Domain.csproj", "{4A1D88A5-7EFB-497A-8169-FCAD36187D43}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NCodeBox.Domain.EF", "NCodeBox.Domain.EF\NCodeBox.Domain.EF.csproj", "{DC5451FA-0CF2-49E2-8CAC-65905A11220F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NCodeBox.Domain.Validation", "NCodeBox.Domain.Validation\NCodeBox.Domain.Validation.csproj", "{B94F2AA5-5C94-444B-955C-27882A661D7D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4A1D88A5-7EFB-497A-8169-FCAD36187D43}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A1D88A5-7EFB-497A-8169-FCAD36187D43}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A1D88A5-7EFB-497A-8169-FCAD36187D43}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A1D88A5-7EFB-497A-8169-FCAD36187D43}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DC5451FA-0CF2-49E2-8CAC-65905A11220F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DC5451FA-0CF2-49E2-8CAC-65905A11220F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DC5451FA-0CF2-49E2-8CAC-65905A11220F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DC5451FA-0CF2-49E2-8CAC-65905A11220F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B94F2AA5-5C94-444B-955C-27882A661D7D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B94F2AA5-5C94-444B-955C-27882A661D7D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B94F2AA5-5C94-444B-955C-27882A661D7D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B94F2AA5-5C94-444B-955C-27882A661D7D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

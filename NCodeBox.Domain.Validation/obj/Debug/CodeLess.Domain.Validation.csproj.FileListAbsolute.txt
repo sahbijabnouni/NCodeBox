@@ -1,0 +1,4 @@
+C:\Workspace\CodeLess.Domain\CodeLess.Domain.Validation\bin\Debug\CodeLess.Domain.Validation.dll
+C:\Workspace\CodeLess.Domain\CodeLess.Domain.Validation\bin\Debug\CodeLess.Domain.Validation.pdb
+C:\Workspace\CodeLess.Domain\CodeLess.Domain.Validation\obj\Debug\CodeLess.Domain.Validation.dll
+C:\Workspace\CodeLess.Domain\CodeLess.Domain.Validation\obj\Debug\CodeLess.Domain.Validation.pdb
