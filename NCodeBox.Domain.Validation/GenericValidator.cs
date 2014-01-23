@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Reflection;
+using System.Text.RegularExpressions;
 
 namespace NCodeBox.Domain.Validation
 {
@@ -11,12 +12,12 @@ namespace NCodeBox.Domain.Validation
 
         public ICollection<ValidationMessage> Errors { get; set; }
         public T Entity { get; set; }
-        public void Init(T t){}
-        public void Validate(){}
+        public void Init(T t) { }
+        public void Validate() { }
         private PropertyInfo _propertyInfo;
         private object _value;
         private bool _isValid;
-        public bool IsValid { get { return Errors.Count == 0; }  }
+        public bool IsValid { get { return Errors.Count == 0; } }
         public GenericValidator<T> For(Expression<Func<T, object>> property)
         {
             _propertyInfo = ExpressionExtensions<T>.GetProperty(property);
@@ -39,7 +40,7 @@ namespace NCodeBox.Domain.Validation
         {
             if (_value is string)
             {
-                _isValid = _value.ToString().Length > nbr;
+                _isValid = _value.ToString().Length <= nbr;
             }
             return this;
         }
@@ -47,7 +48,31 @@ namespace NCodeBox.Domain.Validation
         {
             if (_value is string)
             {
-                _isValid = _value.ToString().Length < nbr;
+                _isValid = _value.ToString().Length >= nbr;
+            }
+            return this;
+        }
+        public GenericValidator<T> Range(dynamic min, dynamic max)
+        {
+            if (IsNumericType(_value.GetType()) && _value.GetType() == min.GetType() && _value.GetType() == max.GetType())
+            {
+                _isValid = _value >= min && _value <= max;
+            }
+            return this;
+        }
+        public GenericValidator<T> Email(dynamic min, dynamic max)
+        {
+            if (_value is string)
+            {
+                _isValid = IsValidEmail(_value.ToString());
+            }
+            return this;
+        }
+        public GenericValidator<T> Url(dynamic min, dynamic max)
+        {
+            if (IsNumericType(_value.GetType()) && _value.GetType() == min.GetType() && _value.GetType() == max.GetType())
+            {
+                _isValid = _value >= min && _value <= max;
             }
             return this;
         }
@@ -71,6 +96,20 @@ namespace NCodeBox.Domain.Validation
             {
                 Errors.Add(new ValidationMessage() { Key = key, Message = new List<string>() { errorMessage } });
             }
+        }
+        public GenericValidator<T> Should<TP>(Func<TP, bool> func)
+        {
+            _isValid = func((TP)_value);
+            return this;
+        }
+        private bool IsNumericType(Type type)
+        {
+            TypeCode typeCode = Type.GetTypeCode(type);
+            return (int)typeCode >= 5 && (int)typeCode <= 15;
+        }
+        private bool IsValidEmail(string email)
+        {
+            return Regex.IsMatch(email, @"^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$");
         }
     }
 }
