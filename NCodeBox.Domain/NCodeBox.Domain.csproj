@@ -43,7 +43,6 @@
     <Compile Include="IAggregateRoot.cs" />
     <Compile Include="IAssociation.cs" />
     <Compile Include="IEntity.cs" />
-    <Compile Include="Async\IGenericRepositoryAsync.cs" />
     <Compile Include="IIdentity.cs" />
     <Compile Include="Validation\IValidator.cs" />
     <Compile Include="Async\PaginatedListAsync.cs" />

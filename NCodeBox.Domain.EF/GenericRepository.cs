@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
 using System.Linq.Expressions;
+using System.Threading.Tasks;
+using NCodeBox.Domain.Async;
+using NCodeBox.Domain.EF.Extensions;
 using NCodeBox.Domain.Extensions;
 
 namespace NCodeBox.Domain.EF
@@ -68,7 +71,44 @@ namespace NCodeBox.Domain.EF
             var query = AddIncludes(DbSet, includes);
             return query.SingleOrDefault(i => (object)i.Id == (object)id);
         }
+        public virtual async Task<IList<TEntity>> GetAsync(Expression<Func<TEntity, bool>> filter = null, Func<IQueryable<TEntity>, IOrderedQueryable<TEntity>> orderBy = null, params Expression<Func<TEntity, object>>[] includes)
+        {
+            return await GetQueryable(filter, orderBy, includes).ToListAsync();
+        }
 
+        public virtual PaginatedListAsync<TEntity> GetPaginatedAsync(int? pageIndex, int? pageSize, Expression<Func<TEntity, bool>> filter = null, Func<IQueryable<TEntity>, IOrderedQueryable<TEntity>> orderBy = null, params Expression<Func<TEntity, object>>[] includes)
+        {
+            pageIndex = pageIndex ?? 0;
+            pageSize = pageSize ?? 10;
+
+            var queryable = GetQueryable(filter, orderBy, includes);
+            if (orderBy == null) queryable = queryable.OrderByDescending(x => x.Id);
+            var paginatedList = queryable.ToPaginatedListAsync((int)pageIndex, (int)pageSize);
+
+            return paginatedList;
+        }
+
+        public virtual async Task<TEntity> GetSingleAsync(Expression<Func<TEntity, bool>> filter = null, params Expression<Func<TEntity, object>>[] includes)
+        {
+            IQueryable<TEntity> query = DbSet;
+
+            if (filter != null)
+            {
+                query = query.Where(filter);
+            }
+
+            if (includes != null)
+            {
+                query = AddIncludes(query, includes);
+            }
+            return await query.SingleOrDefaultAsync();
+        }
+
+        public virtual async Task<TEntity> GetByIdAsync(TId id, params Expression<Func<TEntity, object>>[] includes)
+        {
+            var query = AddIncludes(DbSet, includes);
+            return await query.SingleOrDefaultAsync(i => (object)i.Id == (object)id);
+        }
         public virtual void Insert(TEntity entity)
         {
             DbSet.Add(entity);
@@ -103,6 +143,22 @@ namespace NCodeBox.Domain.EF
 
             }
             return query;
+        }
+        private IQueryable<TEntity> GetQueryable(Expression<Func<TEntity, bool>> filter = null, Func<IQueryable<TEntity>, IOrderedQueryable<TEntity>> orderBy = null, params Expression<Func<TEntity, object>>[] includes)
+        {
+            IQueryable<TEntity> query = DbSet;
+
+            if (filter != null)
+            {
+                query = query.Where(filter);
+            }
+
+            if (includes != null)
+            {
+                query = AddIncludes(query, includes);
+            }
+
+            return orderBy != null ? orderBy(query) : query;
         }
     }
 }

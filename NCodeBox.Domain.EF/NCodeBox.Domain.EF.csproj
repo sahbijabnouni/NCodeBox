@@ -48,7 +48,6 @@
   <ItemGroup>
     <Compile Include="Async\Extensions\QueryableExtensions.cs" />
     <Compile Include="GenericRepository.cs" />
-    <Compile Include="Async\GenericRepositoryAync.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
