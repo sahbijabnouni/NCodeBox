@@ -39,10 +39,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="PaginatedList.cs" />
     <Compile Include="IAggregateRoot.cs" />
+    <Compile Include="IAssociation.cs" />
+    <Compile Include="IEntity.cs" />
+    <Compile Include="Async\IGenericRepositoryAsync.cs" />
     <Compile Include="IIdentity.cs" />
     <Compile Include="Validation\IValidator.cs" />
-    <Compile Include="PaginatedList.cs" />
+    <Compile Include="Async\PaginatedListAsync.cs" />
     <Compile Include="Extensions\QueryableExtensions.cs" />
     <Compile Include="IGenericRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
