@@ -1,5 +1,0 @@
-C:\Workspace\CodeLess.Domain\CodeLess.Infrastructure\bin\Debug\CodeLess.Infrastructure.dll
-C:\Workspace\CodeLess.Domain\CodeLess.Infrastructure\bin\Debug\CodeLess.Infrastructure.pdb
-C:\Workspace\CodeLess.Domain\CodeLess.Infrastructure\obj\Debug\CodeLess.Infrastructure.dll
-C:\Workspace\CodeLess.Domain\CodeLess.Infrastructure\obj\Debug\CodeLess.Infrastructure.pdb
-C:\Workspace\CodeLess.Domain\CodeLess.Infrastructure\obj\Debug\CodeLess.Infrastructure.csprojResolveAssemblyReference.cache

@@ -6,3 +6,9 @@
 /NCodeBox.Domain.Validation/bin
 /NCodeBox.Infrastructure/obj
 /NCodeBox.Infrastructure/bin
+/packages
+obj
+bin
+/_ReSharper.NCodeBox.Libs
+/NCodeBox.Tests
+/.gitignore

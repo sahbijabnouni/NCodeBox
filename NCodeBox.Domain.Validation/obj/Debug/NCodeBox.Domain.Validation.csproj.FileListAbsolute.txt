@@ -9,3 +9,17 @@ C:\Workspace\Libs\NCodeBox.Domain.Validation\obj\Debug\NCodeBox.Domain.Validatio
 C:\Workspace\Libs\NCodeBox.Domain.Validation\obj\Debug\NCodeBox.Domain.Validation.csprojResolveAssemblyReference.cache
 C:\Workspace\Libs\NCodeBox.Domain.Validation\bin\Debug\NCodeBox.Domain.dll
 C:\Workspace\Libs\NCodeBox.Domain.Validation\bin\Debug\NCodeBox.Domain.pdb
+C:\Workspace\NCodeBox\NCodeBox.Domain.Validation\bin\Debug\NCodeBox.Domain.Validation.dll
+C:\Workspace\NCodeBox\NCodeBox.Domain.Validation\bin\Debug\NCodeBox.Domain.Validation.pdb
+C:\Workspace\NCodeBox\NCodeBox.Domain.Validation\bin\Debug\NCodeBox.Domain.dll
+C:\Workspace\NCodeBox\NCodeBox.Domain.Validation\bin\Debug\NCodeBox.Domain.pdb
+C:\Workspace\NCodeBox\NCodeBox.Domain.Validation\obj\Debug\NCodeBox.Domain.Validation.csprojResolveAssemblyReference.cache
+C:\Workspace\NCodeBox\NCodeBox.Domain.Validation\obj\Debug\NCodeBox.Domain.Validation.dll
+C:\Workspace\NCodeBox\NCodeBox.Domain.Validation\obj\Debug\NCodeBox.Domain.Validation.pdb
+C:\Workspace\Libs\NCodeBox\NCodeBox.Domain.Validation\bin\Debug\NCodeBox.Domain.Validation.dll
+C:\Workspace\Libs\NCodeBox\NCodeBox.Domain.Validation\bin\Debug\NCodeBox.Domain.Validation.pdb
+C:\Workspace\Libs\NCodeBox\NCodeBox.Domain.Validation\bin\Debug\NCodeBox.Domain.dll
+C:\Workspace\Libs\NCodeBox\NCodeBox.Domain.Validation\bin\Debug\NCodeBox.Domain.pdb
+C:\Workspace\Libs\NCodeBox\NCodeBox.Domain.Validation\obj\Debug\NCodeBox.Domain.Validation.csprojResolveAssemblyReference.cache
+C:\Workspace\Libs\NCodeBox\NCodeBox.Domain.Validation\obj\Debug\NCodeBox.Domain.Validation.dll
+C:\Workspace\Libs\NCodeBox\NCodeBox.Domain.Validation\obj\Debug\NCodeBox.Domain.Validation.pdb
